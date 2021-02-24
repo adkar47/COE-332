@@ -1,7 +1,7 @@
 ADJUSTMENTS
 
 read_animals.py now can precisely distinguish the number of animals using the parameter num_of_animals
-read_animals.py also checks for different errors now when trying to return a number from the list
+and also checks for different errors now when trying to return a number from the list, and
 Prints a number based on animals.json
 generate_animals.py will provide 20 random animals into animals.json from the previous homework
 
