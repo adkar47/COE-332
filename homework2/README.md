@@ -25,3 +25,4 @@ RUN THROUGH DOCKER
 
 UNIT TESTING
 1.) emacs or vim test_read_animals.py
+2..) All tests should pass
