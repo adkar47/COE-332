@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    container_name: adhi_midterm
+    ports:
+      - 5014:5000
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6394:6379
+    volumes:
+      - ./config/redis.conf:/redis.conf
+    command: [ "redis-server", "/redis.conf" ]
