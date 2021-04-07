@@ -1,0 +1,27 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: partc-deployment
+  labels:
+    greeting: personalized
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      greeting: personalized
+  template:
+    metadata:
+      labels:
+        greeting: personalized
+    spec:
+      containers:
+        - name: hello
+          image: ubuntu:18.04
+          command: ['sh', '-c', 'echo "Hello, $NAME from IP $POD_IP" && sleep 3600']
+          env:
+          - name: NAME
+            value: "Adhi"
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
