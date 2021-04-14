@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-pvc-deployment
+  labels:
+    username: adkar47
+    env: test
+    app: adkar47-test-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adkar47-test-redis
+  template:
+    metadata:
+      labels:
+        app: adkar47-test-redis
+    spec:
+      containers:
+        - name: redis-container
+          image: redis:5.0.0
+          volumeMounts:
+          - name: redis-adkar47-test
+            mountPath: "/data"
+      volumes:
+      - name: redis-adkar47-test
+        persistentVolumeClaim:
+          claimName: redis-adkar47-test
