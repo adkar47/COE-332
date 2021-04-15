@@ -1,9 +1,10 @@
 SERVICES FOR FLASK APP AND REDIS DATABASE
 
 1.) RUN: kubectl apply -f adkar47-test-flask-service.yml
+
 2.) RUN: kubectl apply -f adkar47-test-redis-service.yml
-3.) RUN two pods one for flask deployment and another for Redis deployment
-4.) RUN: kubectl get pods
+4.) RUN two pods one for flask deployment and another for Redis deployment
+5.) RUN: kubectl get pods
 NAME                                             READY   STATUS    RESTARTS   AGE
 adkar47-test-flask-deployment-797b7db9bb-84d52   1/1     Running   0          73m
 adkar47-test-flask-deployment-797b7db9bb-jsxj2   1/1     Running   0          73m
