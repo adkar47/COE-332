@@ -26,4 +26,4 @@ app1                         NodePort    10.109.114.68   <none>        5000:3122
   
 6.) Next run the command kubectl exec -it adkar47-test-flask-deployment-797b7db9bb-84d52 -- /bin/bash
 This will bring you inside the container within the pods shell which will now say "root"
-7.) pip3 commands in the root pod and run the app routes from app.py through curl
+7.) pip3 command in the root pod and run the app routes from app.py through curl
