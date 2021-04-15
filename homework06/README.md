@@ -9,6 +9,7 @@ SERVICES FOR FLASK APP AND REDIS DATABASE
 4.) RUN: kubectl get pods
 
 NAME                                             READY   STATUS    RESTARTS   AGE
+
 adkar47-test-flask-deployment-797b7db9bb-84d52   1/1     Running   0          73m
 adkar47-test-flask-deployment-797b7db9bb-jsxj2   1/1     Running   0          73m
 hello-deployment-55f4459bf-84p2c                 1/1     Running   170        7d2h
