@@ -34,6 +34,16 @@ adkar47-test-redis-service   ClusterIP   10.97.21.171    <none>        6379/TCP 
 app1                         NodePort    10.109.114.68   <none>        5000:31228/TCP   7d3h
   
 6.) Next run the command kubectl exec -it adkar47-test-flask-deployment-797b7db9bb-84d52 -- /bin/bash
-
 This will bring you inside the container within the pods shell which will now say "root"
-7.) pip3 command in the root pod and run the app routes from app.py through curl
+
+7.) Launch deployments and PVC
+
+deployment.apps/adkar47-test-flask-deployment created
+
+service/adkar47-test-flask-service created
+
+deployment.apps/adkar47-test-flask-deployment configured
+
+persistentvolumeclaim/redis-adkar47-test unchanged
+
+8.) pip3 command in the root pod and run the app routes from app.py through curl
