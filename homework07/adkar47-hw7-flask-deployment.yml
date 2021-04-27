@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adkar47-hw7-flask-deployment
+  labels:
+    app: adkar47-hw7-flask
+    username: adkar47
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adkar47-hw7-flask
+  template:
+    metadata:
+      labels:
+        app: adkar47-hw7-flask
+    spec:
+      containers:
+        - name: flask-container
+          imagePullPolicy: Always
+          image: adkar47/adkar47-hw7
+          command: ['python3', 'api.py']
+          env:
+          - name: FlaskApp
+            value: "api.py"
+          ports:
+          - name: http
+            containerPort: 5000
