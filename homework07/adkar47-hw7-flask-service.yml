@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: adkar47-hw7-flask-service
+  labels:
+    username: adkar47
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: adkar47-hw7-flask
+  ports:
+  - name: adkar47-flask
+    port: 5000
+    targetPort: 5000
