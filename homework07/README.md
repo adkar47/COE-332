@@ -22,12 +22,30 @@ rd.keys()
 7.) New worker tag updated within the jobs.py script
 
 def update_job_status(jid, new_status):
+
+
     """Update the status of job with job id `jid` to status `status`."""
+    
+    
     jid, status, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'start', 'end')
+    
+    
     job = _instantiate_job(jid, status, start, end)
+    
+    
     if job:
+    
+    
         job['status'] = new_status
+        
+        
         job['worker'] = os.environ['WORKER_IP']
+        
+        
         _save_job(_generate_job_key(job['id']), job)
+        
+        
     else:
+    
+   
         raise Exception()
