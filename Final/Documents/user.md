@@ -2,6 +2,8 @@ PROJECT DATA: Animal Center Intakes from Oct, 1st 2013 to present. Intakes repre
 
 Over 120,000 rows of data from 2013 until new updates today. The table columns consist of animal_id, name, datetime, monthyear, found_location, intake_type, intake_condtion, animal_type, sex_upon_intake, age_upon_intake and breed 
 
+Raw data in CSV and json from is available in the data directory
+
 1.) Exec into python debug file using: kubectl exec -it py-debug-deployment-5cc8cdd65f-gg774  -- /bin/bash
 
 2.) Copy your flask URL before any curl route like: root@py-debug-deployment-5cc8cdd65f-gg774:/# curl 10.99.255.213:5000/
