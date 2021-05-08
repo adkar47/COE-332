@@ -41,4 +41,5 @@ adkar47-final-redis-service   ClusterIP   10.108.43.109   <none>        6379/TCP
 9.)Check stautus of pvc: kubectl get pvc
 
 NAME                      STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+
 adkar47-final-redis-pvc   Bound    pvc-bcb0f238-7408-4b9e-a039-b4e29245e02a   1Gi        RWO            rbd            3h25m
