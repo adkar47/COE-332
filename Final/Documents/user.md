@@ -8,17 +8,17 @@ Over 120,000 rows of data from 2013 until new updates today. The table columns c
 
 3.) Route Functionality:
 
-/populate : Will populate the Data into the database 
+/populate : Will populate the Data into the database (1)
 
-/Insert : C in CRUD, Can add a new intake species from the json list
+/Insert : C in CRUD, Can add a new intake species from the json list (2)
 
-/Obtain_Intake : R in CRUD, Can query an animal based on the aninal id tag given in the described dataset
+/Obtain_Intake : R in CRUD, Can query an animal based on the aninal id tag given in the described dataset (3)
 
-/Update/ : U in CRUD, can update an animals feautres from the json list 
+/Update/ : U in CRUD, can update an animals feautres from the json list (4)
 
-/terminate : D in CRUD, deletes a job or animal by the animal ID number given 
+/terminate : D in CRUD, deletes a job or animal by the animal ID number given (5)
 
-/jobs : job request will be graphed by datetime in the worker file
+/jobs : job request will be graphed by datetime in the worker file (6)
 
 1.) curl 10.99.255.213:5000/populate -X POST
 
