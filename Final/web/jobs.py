@@ -9,15 +9,12 @@ q = HotQueue("queue", host='10.108.43.109', port=6379, db=1)
 rd_jobs = StrictRedis(host='10.108.43.109', port=6379, db=0)
 rd_data = StrictRedis(host='10.108.43.109', port=6379, db=2)
 
-#pizza_chain1 = pd.read_cvs('Datafiniti_Pizza_Restaurants_and_the_Pizza_They_Sell_Jun19.csv').fillna(0)                                                                                  
-#pizza_chain2 = pd.read_cvs('8358_1.csv').fillna(0)                                                                                                                                      
+                                                                                                                                     
 #pizza_chain1 = pd.read_csv('https://query.data.world/s/fhrkutpspa5tbo2intmhzgzayppy3z').fillna(0) #First location on datainfiniti for pizza stores                                      
 #pizza_chain2 = pd.read_csv('https://query.data.world/s/4ln24fqsirpq4krho4clki6wvaqbwy').fillna(0) #Second location on datainfiniti for pizza stores                                     
 
-
 #master_chain = pd.merge(pizza_chain1, pizza_chain2, how='left', left_on= ['id', 'address', 'categories'], right_on = ['id', 'address','categories']).fillna(0) #Combining the data for \
                                                                                                                                   
-
 #master_chain = master_chain.sort_values(by=['id','address','categories']) #Only using the first three columns of the dataset: the id, address, and category                             
 
 def get_data(): #returns a dictionary                                                                                                                                                    
